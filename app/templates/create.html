@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<div class="images">
+  <div>
+    <img src="{% static 'images\2692984_1632745507.225.jpg'%}" />
+    <p class="axuiliary">Аудитория</p>
+  </div>
+  <div>
+    <img src="{% static 'images\12fe2c7de382debb49c.jpg'%}" />
+    <p class="axuiliary">Коворкинг</p>
+  </div>
+  <div>
+    <img src="{% static 'images\864c66af3dc2cc0eb8166ba359500f25.jpg'%}" />
+    <p class="axuiliary">Кинозал</p>
+  </div>
+</div>
+
+<form method="post" class="form">
+  {% csrf_token %} {{ form }}
+
+  <button>Создать заявку</button>
+</form>
+
+{% endblock content %}
